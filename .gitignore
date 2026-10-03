@@ -1,0 +1,41 @@
+# Dependencies and generated code
+node_modules/
+dist/
+.lmstudio/*
+!.lmstudio/entry.ts
+
+# Local installation and runtime account data
+install-state.json
+settings.json
+global-plugin-configs.json
+model-catalog-cache.json
+capability-reference.json
+native-defaults-v2.json
+usage/
+balances/
+model-status/
+conversations/
+*.conversation.json
+
+# Secrets and local configuration
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.pfx
+.npmrc
+
+# Local research, backups, logs, and OS/editor files
+research/
+.backups/
+SILINEBILIR-YEDEKLER/
+*.bak
+*.backup
+*.tmp
+*.log
+coverage/
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

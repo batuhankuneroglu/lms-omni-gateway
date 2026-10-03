@@ -1,0 +1,40 @@
+{
+  "name": "lms-omni-gateway",
+  "version": "1.0.0",
+  "description": "LM Studio API generator with provider profiles, automatic model discovery and usage reporting.",
+  "main": "dist/index.js",
+  "private": true,
+  "engines": {
+    "node": ">=22"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/batuhankuneroglu/lms-omni-gateway.git"
+  },
+  "homepage": "https://github.com/batuhankuneroglu/lms-omni-gateway#readme",
+  "bugs": {
+    "url": "https://github.com/batuhankuneroglu/lms-omni-gateway/issues"
+  },
+  "scripts": {
+    "dev": "lms dev",
+    "typecheck": "tsc --noEmit",
+    "build": "tsc && esbuild ./.lmstudio/entry.ts --bundle --platform=node --format=cjs --target=node22 --packages=external --outfile=.lmstudio/production.js",
+    "test": "tsc && node --test tests/*.test.cjs",
+    "install:lmstudio": "lms dev --install"
+  },
+  "author": "lms omni gateway contributors",
+  "license": "ISC",
+  "dependencies": {
+    "@lmstudio/sdk": "1.4.0",
+    "openai": "^5.2.0",
+    "zod": "3.24.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.8",
+    "esbuild": "^0.28.2",
+    "typescript": "^7.0.2"
+  },
+  "contributors": [
+    "sonct (original openai-compat-endpoint project)"
+  ]
+}
